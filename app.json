@@ -1,0 +1,36 @@
+{
+    "expo": {
+        "name": "eduweb-mobile",
+        "slug": "eduweb-mobile",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./public/logo.png",
+        "scheme": "myapp",
+        "userInterfaceStyle": "automatic",
+        "newArchEnabled": true,
+        "ios": {
+            "supportsTablet": true
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./public/logo.png",
+                "backgroundColor": "#ffffff"
+            }
+        },
+        "plugins": [
+            "expo-router",
+            [
+                "expo-splash-screen",
+                {
+                    "image": "./public/logo.png",
+                    "imageWidth": 200,
+                    "resizeMode": "contain",
+                    "backgroundColor": "#ffffff"
+                }
+            ]
+        ],
+        "experiments": {
+            "typedRoutes": true
+        }
+    }
+}
