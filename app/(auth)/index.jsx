@@ -51,7 +51,6 @@ export default function Index() {
                             </Text>
                         </Link>
                     </View>
-                    <View className="w-full h-[1px] bg-black"></View>
                     <View className="flex-col items-center justify-center">
                         <Text className="text-base-300 text-lg font-medium text-center">
                             Inicia sesión con proveedores

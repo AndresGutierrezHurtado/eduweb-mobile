@@ -45,6 +45,11 @@ export default function Login() {
                 >
                     Edu<Text className="text-primary">Web</Text>
                 </Text>
+                <Link href="/register" asChild>
+                    <Text className="text-base-content text-lg text-center">
+                        Si aún no tienes una cuenta, <Text className="text-primary">crea una</Text>
+                    </Text>
+                </Link>
             </View>
             <View className="flex-1 items-center justify-center bg-sky-50 rounded-t-xl p-10">
                 <View className="flex-1 items-center justify-center gap-6 w-full">
