@@ -54,14 +54,6 @@ export const AuthProvider = ({ children }) => {
         verify();
     }, [pathname]);
 
-    if (loading) {
-        return (
-            <View className="flex-1 items-center justify-center">
-                <ActivityIndicator size="large" />
-            </View>
-        );
-    }
-
     return (
         <AuthContext.Provider value={{ data: user, logout, reload, loading }}>
             {children}

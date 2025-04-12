@@ -8,7 +8,7 @@ import { useAuth } from "../../contexts/authContexts";
 import { useGetData } from "../../hooks/useFetchData";
 
 export default function Home() {
-    const { data: user, logout } = useAuth();
+    const { data: user, } = useAuth();
 
     const { data: userCourses } = useGetData(`/users/${user.user_id}/courses`);
 
@@ -19,9 +19,6 @@ export default function Home() {
                     Bienvenido, {user.user_name} {user.user_lastname}
                 </Text>
             </View>
-            <Pressable onPress={() => logout()}>
-                <Text>Logout</Text>
-            </Pressable>
         </View>
     );
 }
