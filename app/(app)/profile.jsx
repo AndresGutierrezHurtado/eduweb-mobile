@@ -17,7 +17,7 @@ export default function Profile() {
     const router = useRouter();
 
     const { data: userCourses, loading: loadingCourses } = useGetData(
-        `/users/${user.user_id}/courses`
+        `/users/${user?.user_id}/courses`
     );
 
     if (loadingCourses) return <Loading />;
@@ -52,6 +52,13 @@ export default function Profile() {
                                     </Text>
                                 </View>
                                 <View className="flex-row items-center gap-2 mt-2">
+                                    <Pressable onPress={() => router.push("/settings")}>
+                                        <View className="bg-primary px-2 py-1 rounded-lg">
+                                            <Text className="text-primary-content">
+                                                Editar perfil
+                                            </Text>
+                                        </View>
+                                    </Pressable>
                                     <Pressable onPress={logout}>
                                         <View className="bg-red-700 px-2 py-1 rounded-lg">
                                             <Text className="text-red-100">Cerrar sesión</Text>
@@ -132,7 +139,7 @@ export default function Profile() {
                                                 onPress={() =>
                                                     router.push(
                                                         process.env.EXPO_PUBLIC_API_URL +
-                                                            `/api/users/${user.user_id}/courses/${course.course_id}/certificate`
+                                                            `/api/users/${user?.user_id}/courses/${course.course_id}/certificate`
                                                     )
                                                 }
                                             >

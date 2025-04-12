@@ -14,7 +14,7 @@ export default function Home() {
     const { data: user } = useAuth();
 
     const { data: userCourses, loading: userCoursesLoading } = useGetData(
-        `/users/${user.user_id}/courses`
+        `/users/${user?.user_id}/courses`
     );
 
     const { data: courses, loading: coursesLoading } = useGetData("/courses");

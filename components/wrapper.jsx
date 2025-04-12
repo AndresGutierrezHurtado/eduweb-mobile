@@ -7,7 +7,7 @@ export default function Wrapper({ children }) {
         <SafeAreaView
             className="flex-1 bg-base-100"
             style={{
-                paddingTop: Platform.OS === "android" ? StatusBar.currentHeight + 30 : 0,
+                paddingTop: Platform.OS === "android" ? StatusBar.currentHeight + 5 : 0,
             }}
         >
             {children}
