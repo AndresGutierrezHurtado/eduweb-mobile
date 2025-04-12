@@ -1,15 +1,23 @@
 import { useState, useEffect } from "react";
 
 const fetchData = async (url, options) => {
-    const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}${url}`, {
-        headers: {
-            "content-type": "application/json",
-            accept: "application/json",
-        },
-        ...options,
-    });
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}${url}`, {
+            headers: {
+                "content-type": "application/json",
+                accept: "application/json",
+            },
+            ...options,
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error;
+    }
 };
 
 export function useGetData(url) {
@@ -39,27 +47,45 @@ export function useGetData(url) {
 }
 
 export async function usePostData(endpoint, data) {
-    const { success, message, data } = await fetchData(endpoint, {
+    const {
+        success,
+        message,
+        data: responseData,
+    } = await fetchData(endpoint, {
         method: "POST",
         body: JSON.stringify(data),
     });
 
-    return { success, message, data };
+    alert(message);
+
+    return { success, message, data: responseData };
 }
 
 export async function usePutData(endpoint, data) {
-    const { success, message, data } = await fetchData(endpoint, {
+    const {
+        success,
+        message,
+        data: responseData,
+    } = await fetchData(endpoint, {
         method: "PUT",
         body: JSON.stringify(data),
     });
 
-    return { success, message, data };
+    alert(message);
+
+    return { success, message, data: responseData };
 }
 
 export async function useDeleteData(endpoint) {
-    const { success, message, data } = await fetchData(endpoint, {
+    const {
+        success,
+        message,
+        data: responseData,
+    } = await fetchData(endpoint, {
         method: "DELETE",
     });
 
-    return { success, message, data };
+    alert(message);
+
+    return { success, message, data: responseData };
 }
