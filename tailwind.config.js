@@ -8,15 +8,17 @@ module.exports = {
     ],
     presets: [require("nativewind/preset")],
     theme: {
-        extend: {},
-        colors: {
-            primary: "#38bdf8",
-            "primary-content": "#020617",
-            "base-100": "#0f172a",
-            "base-200": "#1e293b",
-            "base-300": "#334155",
-            "base-content": "#f0f9ff",
+        extend: {
+            colors: {
+                primary: "#38bdf8",
+                "primary-content": "#020617",
+                "base-100": "#0f172a",
+                "base-200": "#1e293b",
+                "base-300": "#334155",
+                "base-content": "#f0f9ff",
+            },
         },
     },
+    darkMode: "class",
     plugins: [],
 };
