@@ -10,12 +10,12 @@ export default function Index() {
         <View className="flex-1 bg-base-100 relative">
             <View className="flex-1 items-center justify-center">
                 <Image
-                    source={require("../../public/logo.png")}
+                    source={require("../../assets/logo.png")}
                     style={{ height: 200, width: 200 }}
                     className="mb-4"
                 />
                 <Text
-                    className="text-5xl font-bold text-base-content"
+                    className="text-5xl text-base-content"
                     style={{ fontFamily: "alegreya-sans" }}
                 >
                     Edu<Text className="text-primary">Web</Text>
@@ -51,13 +51,19 @@ export default function Index() {
                             </Text>
                         </Link>
                     </View>
-                    <View className="flex-row gap-5 mt-4">
-                        <Pressable className="w-14 h-14 rounded-full bg-zinc-300 items-center justify-center">
-                            <Icon name="google" size={20} color="#1e293b" />
-                        </Pressable>
-                        <Pressable className="w-14 h-14 rounded-full bg-zinc-300 items-center justify-center">
-                            <Icon name="github" size={20} color="#1e293b" />
-                        </Pressable>
+                    <View className="w-full h-[1px] bg-black"></View>
+                    <View className="flex-col items-center justify-center">
+                        <Text className="text-base-300 text-lg font-medium text-center">
+                            Inicia sesión con proveedores
+                        </Text>
+                        <View className="flex-row gap-5 mt-4">
+                            <Pressable className="w-14 h-14 rounded-full bg-zinc-300 items-center justify-center">
+                                <Icon name="google" size={20} color="#1e293b" />
+                            </Pressable>
+                            <Pressable className="w-14 h-14 rounded-full bg-zinc-300 items-center justify-center">
+                                <Icon name="github" size={20} color="#1e293b" />
+                            </Pressable>
+                        </View>
                     </View>
                 </View>
             </View>

@@ -8,7 +8,7 @@ import { ActivityIndicator, View } from "react-native";
 
 export default function RootLayout() {
     const [fontsLoaded] = useFonts({
-        "alegreya-sans": require("../public/fonts/AlegreyaSans-Bold.ttf"),
+        "alegreya-sans": require("../assets/fonts/AlegreyaSans-Bold.ttf"),
     });
 
     if (!fontsLoaded) {

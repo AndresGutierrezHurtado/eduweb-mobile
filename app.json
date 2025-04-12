@@ -4,7 +4,7 @@
         "slug": "eduweb-mobile",
         "version": "1.0.0",
         "orientation": "portrait",
-        "icon": "./public/logo.png",
+        "icon": "./assets/logo.png",
         "scheme": "myapp",
         "userInterfaceStyle": "automatic",
         "newArchEnabled": true,
@@ -13,7 +13,7 @@
         },
         "android": {
             "adaptiveIcon": {
-                "foregroundImage": "./public/logo.png",
+                "foregroundImage": "./assets/logo.png",
                 "backgroundColor": "#ffffff"
             }
         },
@@ -22,7 +22,7 @@
             [
                 "expo-splash-screen",
                 {
-                    "image": "./public/logo.png",
+                    "image": "./assets/logo.png",
                     "imageWidth": 200,
                     "resizeMode": "contain",
                     "backgroundColor": "#ffffff"

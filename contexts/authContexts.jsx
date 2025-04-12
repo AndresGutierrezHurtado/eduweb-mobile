@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { ActivityIndicator, View } from "react-native";
 import { storage } from "../utils/storage";
-import { usePathname } from "expo-router";
+import { usePathname, useRouter } from "expo-router";
 
 const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const pathname = usePathname();
+    const router = useRouter();
 
     const verify = async () => {
         setLoading(true);
@@ -41,6 +42,7 @@ export const AuthProvider = ({ children }) => {
         await storage.deleteItem("auth_token");
         setUser(null);
         setLoading(false);
+        alert("Cerrando sesión...");
         router.push("/");
     };
 

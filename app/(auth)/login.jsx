@@ -34,13 +34,13 @@ export default function Login() {
             <View className="flex-1 items-center justify-center">
                 <Pressable onPress={() => router.push("/")}>
                     <Image
-                        source={require("../../public/logo.png")}
+                        source={require("../../assets/logo.png")}
                         style={{ height: 200, width: 200 }}
                         className="mb-4"
                     />
                 </Pressable>
                 <Text
-                    className="text-5xl font-bold text-base-content"
+                    className="text-5xl text-base-content"
                     style={{ fontFamily: "alegreya-sans" }}
                 >
                     Edu<Text className="text-primary">Web</Text>
