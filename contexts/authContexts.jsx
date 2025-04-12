@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
             return setUser(null);
         }
 
-        const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/login`, {
+        const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/api/login`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -39,11 +39,11 @@ export const AuthProvider = ({ children }) => {
     };
 
     const logout = async () => {
+        alert("Cerrando sesión...");
+        router.push("/");
         await storage.deleteItem("auth_token");
         setUser(null);
         setLoading(false);
-        alert("Cerrando sesión...");
-        router.push("/");
     };
 
     const reload = () => {

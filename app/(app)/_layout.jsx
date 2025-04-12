@@ -28,7 +28,7 @@ export default function AuthLayout() {
                 screenOptions={{
                     tabBarStyle: {
                         position: "absolute",
-                        backgroundColor: "#00000090",
+                        backgroundColor: "#0f172a",
                         borderWidth: 1,
                         borderColor: "#334155",
                         marginHorizontal: 10,

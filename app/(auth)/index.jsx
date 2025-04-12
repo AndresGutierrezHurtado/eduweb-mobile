@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, Image, Button, Pressable } from "react-native";
-import { Link, Redirect } from "expo-router";
+import { View, Text, Image, Pressable } from "react-native";
+import { Link } from "expo-router";
 
 // Components
 import { Icon } from "../../components/icons";

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const fetchData = async (url, options) => {
     try {
-        const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}${url}`, {
+        const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/api${url}`, {
             headers: {
                 "content-type": "application/json",
                 accept: "application/json",
