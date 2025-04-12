@@ -3,23 +3,14 @@ import { View, Text, Image, Button, Pressable } from "react-native";
 import { Link, Redirect } from "expo-router";
 
 // Components
-import { Icon } from "../components/icons";
-
-// Contexts
-import { useAuth } from "../contexts/authContexts";
+import { Icon } from "../../components/icons";
 
 export default function Index() {
-    const { data: session } = useAuth();
-
-    if (session) {
-        return <Redirect to="/home" />;
-    }
-
     return (
         <View className="flex-1 bg-base-100 relative">
             <View className="flex-1 items-center justify-center">
                 <Image
-                    source={require("../public/logo.png")}
+                    source={require("../../public/logo.png")}
                     style={{ height: 200, width: 200 }}
                     className="mb-4"
                 />
