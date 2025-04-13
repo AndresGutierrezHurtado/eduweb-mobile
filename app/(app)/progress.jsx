@@ -78,7 +78,11 @@ export default function Progress() {
                 <Text className="text-base-content text-xl font-semibold mb-2">
                     Lecciones en los últimos 7 días
                 </Text>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                <ScrollView
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    style={{ paddingVertical: 10 }}
+                >
                     <LineChart
                         height={220}
                         width={Dimensions.get("window").width * 1.5}
@@ -88,17 +92,13 @@ export default function Progress() {
                             datasets: [{ data: daysLessons }],
                         }}
                         chartConfig={{
-                            backgroundGradientFrom: "#0f1721",
-                            backgroundGradientTo: "#0f1721",
+                            backgroundGradientFrom: "#0f172a",
+                            backgroundGradientTo: "#0f172a",
                             decimalPlaces: 0,
                             color: () => `#38bdf8`,
                             style: { borderRadius: 16 },
                         }}
                         bezier
-                        style={{
-                            marginVertical: 10,
-                            borderRadius: 10,
-                        }}
                     />
                 </ScrollView>
 

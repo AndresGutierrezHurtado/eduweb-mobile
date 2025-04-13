@@ -26,8 +26,8 @@ export default function Home() {
     return (
         <Wrapper>
             <ScrollView className="flex-1 px-4">
-                <View className="gap-5 py-10">
-                    <View>
+                <View className="gap-3 py-5">
+                    <View className="gap-1">
                         <Text className="text-primary font-bold">
                             Bienvenido a EduWeb, {user.user_name}
                         </Text>
@@ -42,7 +42,7 @@ export default function Home() {
                         comunidad de apoyo.
                     </Text>
                 </View>
-                <View className="gap-5 py-10">
+                <View className="gap-5 py-5">
                     <Text className="text-base-content text-2xl font-bold">Cursos pendientes</Text>
                     {pendingCourses.length == 0 && (
                         <View className="flex-1 items-center justify-center">
@@ -57,7 +57,7 @@ export default function Home() {
                         })}
                     </View>
                 </View>
-                <View className="gap-5 py-10 mb-24">
+                <View className="gap-5 py-5 mb-24">
                     <Text className="text-base-content text-2xl font-bold">Explorar cursos</Text>
                     <View className="flex-row flex-wrap gap-5">
                         {courses.map((course) => {
