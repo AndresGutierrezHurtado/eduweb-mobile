@@ -51,7 +51,7 @@ export default function Index() {
                             </Text>
                         </Link>
                     </View>
-                    <View className="flex-col items-center justify-center">
+                    {/* <View className="flex-col items-center justify-center">
                         <Text className="text-base-300 text-lg font-medium text-center">
                             Inicia sesión con proveedores
                         </Text>
@@ -63,7 +63,7 @@ export default function Index() {
                                 <Icon name="github" size={20} color="#1e293b" />
                             </Pressable>
                         </View>
-                    </View>
+                    </View> */}
                 </View>
             </View>
         </View>

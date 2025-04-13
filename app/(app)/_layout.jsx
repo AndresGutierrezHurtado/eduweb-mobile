@@ -23,7 +23,7 @@ export default function AuthLayout() {
 
     return (
         <>
-            <StatusBar style="light" />
+            <StatusBar style="light" backgroundColor="#0f172a" />
             <Tabs
                 screenOptions={{
                     tabBarStyle: {

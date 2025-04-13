@@ -1,4 +1,5 @@
 import { Redirect, Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 // Contexts
 import { useAuth } from "../../contexts/authContexts";
@@ -13,6 +14,7 @@ export default function AuthLayout() {
 
     return (
         <SafeAreaView className="flex-1 bg-base-100">
+            <StatusBar style="light" backgroundColor="#0f172a" />
             <Stack screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="login" />
                 <Stack.Screen name="register" />
