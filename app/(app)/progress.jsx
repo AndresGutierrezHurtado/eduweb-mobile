@@ -86,7 +86,6 @@ export default function Progress() {
                     <LineChart
                         height={220}
                         width={Dimensions.get("window").width * 1.5}
-                        yAxisInterval={1}
                         data={{
                             labels: days,
                             datasets: [{ data: daysLessons }],
@@ -94,11 +93,12 @@ export default function Progress() {
                         chartConfig={{
                             backgroundGradientFrom: "#0f172a",
                             backgroundGradientTo: "#0f172a",
-                            decimalPlaces: 0,
+                            decimalPlaces: 1,
                             color: () => `#38bdf8`,
                             style: { borderRadius: 16 },
                         }}
                         bezier
+                        fromZero={true}
                     />
                 </ScrollView>
 
