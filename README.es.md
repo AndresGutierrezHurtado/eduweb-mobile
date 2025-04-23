@@ -4,21 +4,21 @@
 
 [Versión para Navegadores](https://github.com/AndresGutierrezHurtado/eduweb)
 
-EduWeb es una plataforma educativa en línea diseñada para facilitar la creación, gestión y consumo de contenido académico. Su enfoque se centra en una experiencia intuitiva para estudiantes y profesores, con herramientas como certificaciones digitales, seguimiento del progreso, exámenes interactivos y visualizaciones gráficas.
+**EduWeb** es una plataforma educativa en línea diseñada para facilitar la creación, gestión y consumo de contenido académico. Su enfoque está en brindar una experiencia intuitiva tanto para estudiantes como para docentes, con herramientas como certificados digitales, seguimiento de progreso, exámenes interactivos y visualizaciones gráficas.
 
-![Course Screenshot](/docs/screenshots/profile.png)
+![Captura del Curso](/docs/screenshots/profile.png)
 
 ---
 
-## 📑 Tabla de Contenido
+## 📑 Tabla de Contenidos
 
--   [Stack Tecnológico](#-stack-tecnológico)
 -   [Características Principales](#-características-principales)
+-   [Stack Tecnológico](#-stack-tecnológico)
 -   [Arquitectura](#️-arquitectura)
--   [Instalación y Desarrollo](#️-instalación-y-desarrollo)
--   [Estructura del Proyecto](#️-estructura-del-proyecto)
--   [Contribución](#-contribución)
 -   [Flujos Funcionales](#-flujos-funcionales)
+-   [Estructura del Proyecto](#️-estructura-del-proyecto)
+-   [Instalación y Desarrollo](#️-instalación-y-desarrollo)
+-   [Contribuciones](#-contribuciones)
 -   [Contacto](#-contacto)
 
 ---
@@ -27,40 +27,40 @@ EduWeb es una plataforma educativa en línea diseñada para facilitar la creaci�
 
 ### 🔐 Autenticación
 
--   Inicio de sesión seguro mediante autenticación basada en tokens
+-   Inicio de sesión seguro utilizando autenticación basada en tokens
 -   Integración con proveedores externos (Google, GitHub)
 
-![Profile Screenshot](/docs/screenshots/auth.png)
+![Captura Autenticación](/docs/screenshots/auth.png)
 
 ### 👤 Sistema de Perfiles
 
--   Perfiles personalizables por el usuario
+-   Perfiles de usuario personalizables
 -   Visualización de información personal y preferencias
--   Listado completo de inscripciones a cursos por usuario
+-   Lista completa de cursos inscritos por usuario
 
-![Profile Screenshot](/docs/screenshots/profile.png)
+![Captura Perfil](/docs/screenshots/profile.png)
 
 ### 🏅 Generación de Certificados
 
 -   Generación automática de certificados digitales al completar un curso
--   Diseño profesional y datos personalizados (nombre, curso, fecha)
+-   Diseño profesional con datos personalizados (nombre, curso, fecha)
 
-![Certificates Screenshot](/docs/screenshots/validate.png)
+![Captura Certificados](/docs/screenshots/validate.png)
 
 ### ✅ Validación de Certificados
 
--   Validación en línea mediante código único o escaneo de QR
+-   Validación en línea mediante código único o escaneo QR
 -   Verificación pública de la autenticidad del certificado emitido
 
-![Validation Screenshot](/docs/screenshots/validate.png)
+![Captura Validación](/docs/screenshots/validate.png)
 
-### 📊 Análisis y Reportes
+### 📊 Analíticas e Informes
 
--   Dashboard interactivo con gráficos estadísticos
+-   Panel interactivo con gráficos estadísticos
 -   Seguimiento detallado del progreso del usuario
--   Visualización de datos con **Chart.js**
+-   Visualización de datos con **react-native-chart-kit**
 
-![Progress Screenshot](/docs/screenshots/progress.png)
+![Captura Progreso](/docs/screenshots/progress.png)
 
 ---
 
@@ -74,6 +74,13 @@ EduWeb es una plataforma educativa en línea diseñada para facilitar la creaci�
 -   **react-native-chart-kit**
 -   **Valibot**
 
+### Backend
+
+-   **Next.js 15 (App Router)**
+-   **MySQL**
+-   **Sequelize ORM**
+-   **JWT (JSON Web Tokens)**
+
 ---
 
 ## 🏗️ Arquitectura
@@ -81,37 +88,19 @@ EduWeb es una plataforma educativa en línea diseñada para facilitar la creaci�
 ![Arquitectura](/docs/arquitecture.png)
 
 -   La aplicación cliente (Expo con React Native) se comunica con una **API REST** construida con **Next.js**
--   La API maneja la lógica de negocio y se conecta a una base de datos **MySQL** mediante el ORM **Sequelize**
+-   La API maneja la lógica de negocio y se conecta a una base de datos **MySQL** usando **Sequelize**
 
 ---
 
-## ⚙️ Instalación y Desarrollo
+## 🔄 Flujos Funcionales
 
-### 🧩 Requisitos Previos
+### 👨‍🎓 Flujo del Usuario
 
--   Tener el backend de Next.js configurado y ejecutándose correctamente
-
-### 🛠️ Pasos de Instalación
-
-1. Descarga y descomprime el proyecto:
-
-2. Instala las dependencias:
-
-```bash
-npm install
-```
-
-3. Copia el archivo de entorno y configura las variables necesarias:
-
-```bash
-cp .env.example .env
-```
-
-4. Ejecuta las migraciones de Sequelize:
-
-```bash
-npm start
-```
+-   **Registrarse e iniciar sesión** de forma segura utilizando autenticación basada en tokens
+-   **Explorar e inscribirse** en los cursos disponibles
+-   **Seguir el progreso** e interactuar con el contenido del curso
+-   **Generar y descargar** certificados digitales al finalizar un curso
+-   **Editar y personalizar** la información y preferencias del perfil personal
 
 ---
 
@@ -119,49 +108,90 @@ npm start
 
 ```
 eduweb/
-│   app/                # Enrutamiento principal de Expo
-│   components/         # Componentes reutilizables
-│   hooks/              # Hooks personalizados
-│   assets/             # Recursos estáticos (imágenes, íconos, etc.)
+├── app/                # Enrutamiento principal y punto de entrada para la aplicación Expo
+│
+├── assets/             # Recursos estáticos (imágenes, íconos, fuentes, etc.)
+├── components/         # Componentes UI reutilizables (botones, formularios, etc.)
+├── contexts/           # Contextos de React para manejo de estado global
+├── docs/               # Documentación del proyecto (capturas, instrucciones, etc.)
+├── hooks/              # Hooks personalizados de React (para lógica de negocio o reutilizable)
+└── utils/              # Funciones utilitarias (helpers, formateadores, etc.)
 ```
 
 ---
 
-## 🤝 Contribución
+## ⚙️ Instalación y Desarrollo
 
-¿Quieres colaborar? ¡Gracias! Sigue estos pasos:
+### 🧩 Requisitos Previos
 
-1. Haz un fork del repositorio
-2. Crea una nueva rama:
+-   Asegúrate de que el backend con Next.js esté correctamente configurado y ejecutándose
+
+### 🛠️ Pasos de Instalación
+
+1. Clonar el repositorio:
+
     ```bash
-    git checkout -b feature/nueva-funcionalidad
+    git clone https://github.com/AndresGutierrezHurtado/eduweb.git
     ```
-3. Realiza tus cambios y haz commit:
+
+2. Instalar dependencias:
+
     ```bash
-    git commit -m "Agrega nueva funcionalidad"
+    npm install
     ```
-4. Sube tus cambios:
+
+3. Copiar el archivo de entorno y configurar las variables requeridas:
+
     ```bash
-    git push origin feature/nueva-funcionalidad
+    cp .env.example .env
     ```
-5. Abre un **Pull Request**
+
+4. Actualizar el `ipconfig` en las variables de entorno con tu configuración local.
+
+5. Iniciar la aplicación:
+
+    ```bash
+    npm start
+    ```
+
+6. Abrir la aplicación en tu navegador en `http://localhost:8081` escribiendo `w` en la terminal:
 
 ---
 
-## 🔄 Flujos Funcionales
+## 🤝 Contribuciones
 
-### 👨‍🎓 Usuario
+¿Quieres contribuir? ¡Gracias! Sigue estos pasos:
 
--   Registro e inicio de sesión
--   Visualización de cursos disponibles
--   Descarga de certificados
--   Edición de perfil de usuario
+1. Haz un fork del repositorio
+
+2. Crea una nueva rama:
+
+    ```bash
+    git checkout -b feature/nueva-funcionalidad
+    ```
+
+3. Realiza tus cambios y haz commit:
+
+    ```bash
+    git commit -m "Agregar nueva funcionalidad"
+    ```
+
+4. Sube tus cambios:
+
+    ```bash
+    git push origin feature/nueva-funcionalidad
+    ```
+
+5. Abre un **Pull Request**
 
 ---
 
 ## 📞 Contacto
 
-Para soporte, dudas o sugerencias, puedes comunicarte a través de:
+Para preguntas, soporte o colaboración, por favor contacta:
 
--   **Correo electrónico**: andres52885241@gmail.com
--   **Teléfono**: +57 320 9202177
+-   Andrés Gutiérrez Hurtado
+-   Email: [andres52885241@gmail.com](mailto:andres52885241@gmail.com)
+-   LinkedIn: [Andrés Gutiérrez](https://www.linkedin.com/in/andr%C3%A9s-guti%C3%A9rrez-hurtado-25946728b/)
+-   GitHub: [@AndresGutierrezHurtado](https://github.com/AndresGutierrezHurtado)
+-   Portafolio: [Link portafolio](https://andres-portfolio-b4dv.onrender.com)
