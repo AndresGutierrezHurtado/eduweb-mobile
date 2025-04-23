@@ -4,20 +4,15 @@ import { useFonts } from "expo-font";
 
 // Contexts
 import { AuthProvider } from "../contexts/authContexts";
-import { ActivityIndicator, View } from "react-native";
+import Loading from "../components/loading";
 
 export default function RootLayout() {
     const [fontsLoaded] = useFonts({
         "alegreya-sans": require("../assets/fonts/AlegreyaSans-Bold.ttf"),
     });
 
-    if (!fontsLoaded) {
-        return (
-            <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-                <ActivityIndicator size="large" />
-            </View>
-        );
-    }
+    if (!fontsLoaded) return <Loading />;
+
     return (
         <AuthProvider>
             <Stack screenOptions={{ headerShown: false }}>
