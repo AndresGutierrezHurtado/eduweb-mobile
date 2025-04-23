@@ -17,6 +17,9 @@ module.exports = {
                 "base-300": "#334155",
                 "base-content": "#f0f9ff",
             },
+            fontFamily: {
+                Alegreya: ["alegreya-sans"],
+            },
         },
     },
     darkMode: "class",
