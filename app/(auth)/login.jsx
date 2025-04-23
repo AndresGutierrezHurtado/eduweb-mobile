@@ -35,7 +35,7 @@ export default function Login() {
                 <Pressable onPress={() => router.push("/")}>
                     <Image
                         source={require("../../assets/logo.png")}
-                        style={{ height: 200, width: 200 }}
+                        style={{ height: 180, width: 180 }}
                         className="mb-4"
                     />
                 </Pressable>
@@ -51,13 +51,13 @@ export default function Login() {
                     </Text>
                 </Link>
             </View>
-            <View className="flex-1 items-center justify-center bg-sky-50 rounded-t-xl p-10">
+            <View className="h-[48%] items-center justify-center bg-sky-50 rounded-t-xl p-10">
                 <View className="flex-1 items-center justify-center gap-6 w-full">
                     <View className="flex-col gap-2">
                         <Text className="text-base-100 text-3xl font-extrabold text-center">
                             Inicia sesión
                         </Text>
-                        <Text className="text-base-300/80 text-lg font-medium text-center">
+                        <Text className="text-base-300/80 text-lg font-medium text-center leading-none">
                             Inicia sesión para poder gestionar tu cuenta.
                         </Text>
                     </View>
@@ -71,12 +71,12 @@ export default function Login() {
                         {({ handleChange, handleSubmit, values }) => (
                             <View className="gap-3 w-full">
                                 <View className="gap-2">
-                                    <Text className="text-base-100 text-lg font-medium ">
+                                    <Text className="text-base-100 text-lg font-medium">
                                         Correo Electrónico:
                                     </Text>
                                     <TextInput
                                         placeholder="Correo electrónico"
-                                        className="border border-base-300 rounded px-3 py-2 w-full"
+                                        className="border border-base-300 rounded px-3 py-2 w-full focus:border-base-300 focus:outline-none"
                                         onChangeText={handleChange("user_email")}
                                         value={values.user_email}
                                     />
@@ -87,7 +87,7 @@ export default function Login() {
                                     </Text>
                                     <TextInput
                                         placeholder="Contraseña"
-                                        className="border border-base-300 rounded px-3 py-2 w-full"
+                                        className="border border-base-300 rounded px-3 py-2 w-full focus:border-base-300 focus:outline-none"
                                         secureTextEntry={true}
                                         onChangeText={handleChange("user_password")}
                                         value={values.user_password}

@@ -34,7 +34,7 @@ export default function Login() {
                 <Pressable onPress={() => router.push("/")}>
                     <Image
                         source={require("../../assets/logo.png")}
-                        style={{ height: 200, width: 200 }}
+                        style={{ height: 180, width: 180 }}
                         className="mb-4"
                     />
                 </Pressable>
@@ -50,15 +50,15 @@ export default function Login() {
                     </Text>
                 </Link>
             </View>
-            <View className="flex-1 items-center justify-center bg-sky-50 rounded-t-xl p-10">
-                <View className="flex-1 items-center justify-center gap-6 w-full">
-                    <ScrollView className="flex-1 w-full" style={{ padding: 1 }}>
-                        <View className="flex-col gap-2">
-                            <Text className="text-base-100 text-3xl font-extrabold text-center">
-                                Registrate
+            <View className="h-[48%] items-center justify-center bg-sky-50 rounded-t-xl py-4">
+                <ScrollView className="flex-1 w-full flex flex-col">
+                    <View className="flex-1 items-center justify-center gap-6 w-full px-10 py-6">
+                        <View className="flex-col gap-2 mb-5">
+                            <Text className="text-base-100 text-4xl font-extrabold text-center">
+                                Regístrate
                             </Text>
-                            <Text className="text-base-300/80 text-lg font-medium text-center">
-                                Registrate para ser parte de la comunidad de EduWeb.
+                            <Text className="text-base-300/80 text-lg font-medium text-center leading-none">
+                                Regístrate para ser parte de la comunidad de EduWeb.
                             </Text>
                         </View>
                         <Formik
@@ -170,8 +170,8 @@ export default function Login() {
                                 </View>
                             )}
                         </Formik>
-                    </ScrollView>
-                </View>
+                    </View>
+                </ScrollView>
             </View>
         </View>
     );
